@@ -42,11 +42,6 @@ $(function() {
           phone: phone,
           message: message,
         },
-        beforeSend: function(xhr) {
-          xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
-          xhr.setRequestHeader('Access-Control-Request-Headers', 'true')
-          xhr.withCredentials = true
-        },
         cache: false,
         success: function() {
           // Success message
