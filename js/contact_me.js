@@ -33,28 +33,13 @@ $(function() {
         message
 
       $.ajax({
-        url:
-          'https://71f86b1f6abfa58368ee279fb66f2ea5:c58f9f720497a2d3ed1bf5585facbd91@api.mailjet.com/v3.1/send',
+        url: 'https://x3fa303ieh.execute-api.us-east-1.amazonaws.com/dev',
         type: 'POST',
-        contentType: 'application/json',
         data: {
-          Messages: [
-            {
-              From: {
-                Email: 'rupert@beconnectedtech.com.au',
-                Name: 'Rupert',
-              },
-              To: [
-                {
-                  Email: 'rupert@beconnectedtech.com.au',
-                  Name: 'Rupert',
-                },
-              ],
-              Subject: 'Contact Form',
-              TextPart: content,
-              HTMLPart: content,
-            },
-          ],
+          name: name,
+          email: email,
+          phone: phone,
+          message: message,
         },
         cache: false,
         success: function() {
