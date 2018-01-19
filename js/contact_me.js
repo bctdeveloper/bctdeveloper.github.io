@@ -33,7 +33,7 @@ $(function() {
         message
 
       $.ajax({
-        url: 'https://x3fa303ieh.execute-api.us-east-1.amazonaws.com/dev',
+        url: 'https://x3fa303ieh.execute-api.us-east-1.amazonaws.com/sendMail',
         type: 'POST',
         data: {
           name: name,
