@@ -36,7 +36,7 @@ $(function() {
         'rupert@beconnectedtech.com.au',
         'beConnectedTech contact form email',
         content,
-        {token: '31826667-c7f4-442c-8081-fa71343b273a'},
+        {token: '6e244aea-551e-482f-bab0-324459321d4d'},
         function done(message) {
           $('#success > .alert-success').append('</div>')
           //clear all fields
