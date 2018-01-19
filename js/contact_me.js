@@ -42,8 +42,10 @@ $(function() {
           phone: phone,
           message: message,
         },
-        headers: {
-          'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+        beforeSend: function(xhr) {
+          xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
+          xhr.setRequestHeader('Access-Control-Request-Headers', 'true')
+          xhr.withCredentials = true
         },
         cache: false,
         success: function() {
