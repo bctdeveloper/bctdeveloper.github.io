@@ -42,6 +42,9 @@ $(function() {
           phone: phone,
           message: message,
         },
+        headers: {
+          'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+        },
         cache: false,
         success: function() {
           // Success message
