@@ -36,12 +36,25 @@ $(function() {
         url:
           'https://71f86b1f6abfa58368ee279fb66f2ea5:c58f9f720497a2d3ed1bf5585facbd91@api.mailjet.com/v3.1/send',
         type: 'POST',
+        contentType: 'application/json',
         data: {
-          subject: 'Contact Form',
-          fromAddress: 'rupert@beconnectedtech.com.au',
-          toAddress: 'rupert@beconnectedtech.com.au',
-          content: content,
-          encoding: 'UTF-8',
+          Messages: [
+            {
+              From: {
+                Email: 'rupert@beconnectedtech.com.au',
+                Name: 'Rupert',
+              },
+              To: [
+                {
+                  Email: 'rupert@beconnectedtech.com.au',
+                  Name: 'Rupert',
+                },
+              ],
+              Subject: 'Contact Form',
+              TextPart: content,
+              HTMLPart: content,
+            },
+          ],
         },
         cache: false,
         success: function() {
