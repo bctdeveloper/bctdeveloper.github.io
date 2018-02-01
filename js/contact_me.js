@@ -34,7 +34,7 @@ $(function() {
 
       $.ajax({
         url:
-          'https://x3fa303ieh.execute-api.us-east-1.amazonaws.com/dev/sendEmail',
+          'https://fx0vts1oc5.execute-api.us-east-1.amazonaws.com/dev/sendEmail',
         type: 'POST',
         data: {
           name: name,
